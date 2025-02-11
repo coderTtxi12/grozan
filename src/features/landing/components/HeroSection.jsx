@@ -130,15 +130,32 @@ export default function HeroSection() {
         <Box ref={transitions.fadeOnce.ref}>
           <Fade direction="up" in={transitions.fadeOnce.inView} timeout={1000}>
             <Box>
-              <Typography
-                variant="h1"
-                sx={{
-                  mb: 2,
-                  color: "text.primary",
-                }}
-              >
-                Transforma tu negocio con inteligencia artificial
-              </Typography>
+              {/* Title for large screens */}
+              <Box sx={{ display: { xs: "none", md: "block" } }}>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    mb: 2,
+                    color: "text.primary",
+                  }}
+                >
+                  Transforma tu negocio con AI
+                </Typography>
+              </Box>
+
+              {/* Title for small screens */}
+              <Box sx={{ display: { xs: "block", md: "none" } }}>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    mb: 2,
+                    color: "text.primary",
+                  }}
+                >
+                  Transforma tu negocio con AI
+                </Typography>
+              </Box>
+
               <Typography
                 variant="body1"
                 sx={{
@@ -146,8 +163,8 @@ export default function HeroSection() {
                   color: "text.secondary",
                 }}
               >
-                Soluciones inteligentes, resultados extraordinarios.
-                <br />
+                {/* Soluciones inteligentes, resultados extraordinarios.
+                <br /> */}
                 Nuestros agentes AI trabajan por ti, eliminando el trabajo
                 manual y potenciando el rendimiento de tu empresa para que
                 alcances nuevos horizontes.
