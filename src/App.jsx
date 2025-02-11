@@ -5,7 +5,7 @@ import theme from "./theme/theme";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/grozan">
       <ThemeProvider theme={theme}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
